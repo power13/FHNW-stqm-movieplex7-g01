@@ -26,9 +26,33 @@
 	
     <build>
     <plugins>
+    	<plugin>
+    			<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>1.0.0.Final</version>
+				<configuration>
+					<hostname>localhost</hostname>
+					<port>9990</port>
+					<username>deploy</username>
+					<password>deploy</password>
+				</configuration>
+<!--				<executions>-->
+<!--					<execution>-->
+<!-- 						<phase>package</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>deploy</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution>-->
+<!-- 				</executions>-->
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+						<title>Movieplex - Software Testing and Qualitymanagement Case Study</title>
+        				<windowtitle>Movieplex - Software Testing and Qualitymanagement Case Study</windowtitle>
+        				<footer>Copyright © 2015 Christoph Denzler, Martin Kropp - IMVS, FHNW </footer>
+   			 	</configuration>
 				<executions>
 					<execution>
 						<id>attach-javadocs</id>
